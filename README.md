@@ -7,14 +7,14 @@ This shim will call ampy under powershell to access the COMx port.
 
 Arguments are modeled after idfx:
 
-ampy-wsl <command> COMx 
+ampy-wsl command COMx 
 
-  where "<command>":
-     get
-     ls
-     mkdir
-     put
-     reset
-     rm
-     rmdir
-     run
+  where "command":  
+     get   
+     ls  
+     mkdir  
+     put  
+     reset  
+     rm  
+     rmdir  
+     run  
