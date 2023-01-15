@@ -9,7 +9,7 @@ Arguments are modeled after idfx:
 
 ampy-wsl <command> COMx 
 
-  where <command>:
+  where "<command>":
      get
      ls
      mkdir
