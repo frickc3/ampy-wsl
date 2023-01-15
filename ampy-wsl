@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Title:
+#   ampy-wsl
+#
+# Description:
+#   This script will allow "ampy" type operations while running under WSL.
+#
+#   While there is no support for USB devices for now,
+#   this tool comes to help you to upload, and list files on
+#   your ESP-IDF (or ESP8266_SDK) applications on the WSL2.
+
+set -e
+
+check_port() {
+  if [ -z "${1}" ]; then
+    printf "%s\n" "Error: It seems like you forgot to provide the PORT" >&2
+    return 1
+  fi
+}
+
+put() {
+   check_port "${1}"
+   local cmd="python.exe -m ampy.cli -p ${1} ${2}"
+   powershell.exe -Command "$cmd"
+   return $?
+}
+
+x=$#          # number of args
+i=1;
+args=""
+while [ $i -lt $x ]
+do
+   args+="$1 "
+   i=$((i + 1))
+   shift 1
+done
+put "${1}" "${args}"   
