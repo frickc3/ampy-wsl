@@ -1,5 +1,5 @@
 # ampy-wsl
-Shim to call adafruit-ampy while running under wsl (Windows Linux Subsystem).
+Bash Shim to call adafruit-ampy while running under wsl (Windows Linux Subsystem).
 
 Since wsl (Windows Linux subsystem does not allow access to the USB to use the CP210x driver across USB.
 
